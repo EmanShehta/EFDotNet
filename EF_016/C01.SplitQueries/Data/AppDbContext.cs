@@ -35,7 +35,6 @@ namespace C01.SplitQuery.QueryData.Data
                 o => o.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
                 .LogTo(Console.WriteLine, Microsoft.Extensions.Logging.LogLevel.Information);
         }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

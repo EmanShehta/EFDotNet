@@ -26,14 +26,12 @@ namespace C07.Pagination.QueryData.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            var config = new ConfigurationBuilder().AddJsonFile("appsettings.json")
-                .Build();
 
-            var connectionString = config.GetSection("constr").Value;
+            var connectionString = "Server=.;Database=EF016;trusted_connection=true;trustServerCertificate=True;Integrated Security=True;MultipleActiveResultSets=true;";
 
             optionsBuilder.UseSqlServer(connectionString);
-
         }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
